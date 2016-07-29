@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kiQ-qJ-Alu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Pizza Map View Controller-->
+        <scene sceneID="4yw-VU-Ycd">
+            <objects>
+                <viewController id="Qmz-nP-alU" customClass="PizzaMapViewController" customModule="PizzaMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P98-Ba-rpC"/>
+                        <viewControllerLayoutGuide type="bottom" id="2PY-i3-1MC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PnT-A6-C41">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fdp-8V-qMm">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Fdp-8V-qMm" secondAttribute="trailing" id="ngI-TG-b3X"/>
+                            <constraint firstItem="Fdp-8V-qMm" firstAttribute="top" secondItem="P98-Ba-rpC" secondAttribute="bottom" id="rbp-Gq-agt"/>
+                            <constraint firstItem="2PY-i3-1MC" firstAttribute="top" secondItem="Fdp-8V-qMm" secondAttribute="bottom" id="tZt-D0-cdY"/>
+                            <constraint firstItem="Fdp-8V-qMm" firstAttribute="leading" secondItem="PnT-A6-C41" secondAttribute="leading" id="xRv-tz-HLf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LSX-Vl-Osy"/>
+                    <connections>
+                        <outlet property="detailView" destination="go6-Cp-1uB" id="tFV-Nr-VIb"/>
+                        <outlet property="mapView" destination="Fdp-8V-qMm" id="IA7-Wd-sAW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8e-09-jeq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="go6-Cp-1uB">
+                    <rect key="frame" x="0.0" y="0.0" width="228" height="206"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sliceIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2Sv-x4-cC7">
+                            <rect key="frame" x="0.0" y="0.0" width="228" height="206"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="2Sv-x4-cC7" secondAttribute="bottom" id="0B5-F4-xfe"/>
+                        <constraint firstItem="2Sv-x4-cC7" firstAttribute="top" secondItem="go6-Cp-1uB" secondAttribute="top" id="2Ap-Go-Jel"/>
+                        <constraint firstItem="2Sv-x4-cC7" firstAttribute="leading" secondItem="go6-Cp-1uB" secondAttribute="leading" id="2xj-32-rpR"/>
+                        <constraint firstAttribute="trailing" secondItem="2Sv-x4-cC7" secondAttribute="trailing" id="ybD-Ns-JNZ"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="2647" y="460"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ft1-9N-c40">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kiQ-qJ-Alu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Jc-SZ-PRk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qmz-nP-alU" kind="relationship" relationship="rootViewController" id="7Mb-0P-Rvc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4eB-sd-zif" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835" y="460"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sliceIcon" width="512" height="512"/>
+    </resources>
+</document>
